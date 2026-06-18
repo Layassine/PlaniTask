@@ -5,6 +5,8 @@ import { tacheApi } from '../api/tacheApi'
 import axiosInstance from '../api/axiosConfig'
 import { useProjet } from '../context/ProjetContext'
 
+
+
 interface JalonDto { id: number; nom: string; dateEcheance?: string; atteint: boolean }
 interface CalEvent { id: string; titre: string; date: string; type: 'deadline' | 'milestone' | 'retard' }
 
@@ -82,6 +84,7 @@ export default function Calendar() {
 
   const isToday = (day: number) => day === today.getDate() && month === today.getMonth() && year === today.getFullYear()
 
+  
   return (
     <div className="space-y-6">
       <div>
