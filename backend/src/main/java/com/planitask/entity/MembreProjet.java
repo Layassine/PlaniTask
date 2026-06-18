@@ -1,5 +1,8 @@
 package com.planitask.entity;
 
+
+
+
 import com.planitask.enums.RoleProjet;
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,6 +26,7 @@ public class MembreProjet {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "projet_id", nullable = false)
     private Projet projet;
+    
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
